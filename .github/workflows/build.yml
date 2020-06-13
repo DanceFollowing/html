@@ -15,7 +15,7 @@ jobs:
     - run: shellcheck review-draft.sh
     - uses: docker://whatwg/html-deploy:latest
       env:
-        HTML_SOURCE: .
+        HTML_SOURCE: /github/workspace
         SERVER: ${{ secrets.MARQUEE_SERVER }}
         SERVER_PUBLIC_KEY: ${{ secrets.MARQUEE_PUBLIC_KEY }}
         SERVER_DEPLOY_KEY: ${{ secrets.MARQUEE_DEPLOY_KEY }}
