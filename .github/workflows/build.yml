@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: shellcheck review-draft.sh
-    - uses: whatwg/html-build@master
+    - uses: docker://whatwg/html-deploy:latest
       env:
         SERVER: ${{ secrets.MARQUEE_SERVER }}
         SERVER_PUBLIC_KEY: ${{ secrets.MARQUEE_PUBLIC_KEY }}
